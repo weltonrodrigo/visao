@@ -1,0 +1,3 @@
+[submodule "desafio26/python_glview"]
+	path = desafio26/python_glview
+	url = https://github.com/weltonrodrigo/python_glview
