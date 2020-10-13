@@ -1,13 +1,13 @@
 # vim:ts=4 sw=4 nowrap:
 # Tempo que funcionou em 25fps: 4.45
-ffmpeg -y -i ../trabalho1/camera1.webm.bkp -vf scale=1280:720 -ss 4.51449102005957 \
-	-r 10 -vsync 1 -crf 28 -q 1 -c:v h264_videotoolbox -q:v 1 -b:v 10000k timestamp-cam-1.mp4
-ffmpeg -y -i ../trabalho1/camera2.webm                       					   \
-	-r 10 -vsync 1 -crf 28 -q 1 -c:v h264_videotoolbox -q:v 1 -b:v 10000k timestamp-cam-2.mp4
-
+ffmpeg -y -i $1 -vf scale=1280:720 -ss 4.51449102005957 \
+	-r 10 -vsync 1 -crf 28 -q 1 -c:v h264_videotoolbox -q:v 1 -b:v 10000k $3
+ffmpeg -y -i $2                       					   \
+	-r 10 -vsync 1 -crf 28 -q 1 -c:v h264_videotoolbox -q:v 1 -b:v 10000k $4
+exit
 ffmpeg \
-	-i timestamp-cam-1.mp4\
-	-i timestamp-cam-2.mp4\
+	-i $3 \
+	-i $4 \
 	-filter_complex \
 		 "[0]drawtext=text=frame %{n}tempo %{pts}:fontsize=72:x=(w-tw)/2: y=h-(2*lh):fontcolor=white:box=1:boxcolor=0x00000099[0t];\
 		  [1]drawtext=text=frame %{n}tempo %{pts}:fontsize=72:x=(w-tw)/2: y=h-(2*lh):fontcolor=white:box=1:boxcolor=0x00000099[1t];\
