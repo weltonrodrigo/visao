@@ -3,3 +3,9 @@ res/*
 .DS_Store
 env
 calib_files
+videos/
+*.png
+*.mp4
+*.webm
+*~
+*.wav
