@@ -1,0 +1,5 @@
+images/*
+res/*
+.DS_Store
+env
+calib_files
