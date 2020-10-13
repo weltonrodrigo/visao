@@ -6,8 +6,17 @@ import numpy as np
 sys.path.append('./python_glview') 
 import pyglview
 
+
+##
+## C to close window
+## 1 and 2 to increase range of colors
+## q and w to reduce
+## r to reset
+## click to sample
+
+## May be necessary to resize the BG image based on your
+
 bg = cv2.imread('bg.jpg', cv2.IMREAD_COLOR)
-bg = cv2.resize(bg, dsize=(1280, 720), interpolation=cv2.INTER_CUBIC)
 
 cap = acapture.open(0) # Camera 0,  /dev/video0
 
@@ -16,8 +25,21 @@ sample_range = None
 sample_size = (10, 10)
 threshold = 20
 step = 1
+resized_bg = None
 
 kernel = np.ones((10,10), np.uint8)
+
+
+def resize_bg(frame_size):
+    '''Necessary to resize the BG image'''
+    global bg, resized_bg
+    if resized_bg is not None:
+        return resized_bg
+    else:
+        print (frame_size)
+        resized_bg = cv2.resize(bg, dsize=(frame_size[1], frame_size[0]), interpolation=cv2.INTER_CUBIC)
+        return resize_bg
+
 
 def change(k):
     '''Increase or decrease the range or masked colors'''
@@ -219,7 +241,8 @@ def loop():
 
             mask = cv2.morphologyEx(mask, cv2.MORPH_CLOSE, kernel)
 
-            bg_masked = np.copy(bg)
+            # make a copy of the resized BG to apply mask
+            bg_masked = np.copy(resize_bg(image_copy.shape[:2]))
 
             bg_masked[mask==0] = [0, 0, 0]
 
