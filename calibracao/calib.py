@@ -25,6 +25,8 @@ parser.add_argument('--tangential', action='store_true',
                     help='enable tangential distortion factor')
 parser.add_argument('--radial3', action='store_true',
                     help='Use three radial distortion factors')
+parser.add_argument('--same-focal-length', action='store_true',
+                    help='Force camera matrix to have equal ƒx e ƒy.')
 parser.add_argument('--width', default=1280, type=int,
                     help='Width of the resulting image')
 parser.add_argument('--height', default=720, type=int,
@@ -43,6 +45,7 @@ size = res.size
 flags = 0
 flags += 0 if res.tangential else cv2.CALIB_FIX_TANGENT_DIST
 flags += 0 if res.radial3 else cv2.CALIB_FIX_K3
+flags += 0 if not res.same_focal_length else cv2.CALIB_SAME_FOCAL_LENGTH
 
 if res.verbose:
     # ll.setLevel(logging.DEBUG)

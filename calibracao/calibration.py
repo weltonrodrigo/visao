@@ -9,12 +9,12 @@ ll = logging.getLogger(__name__)
 
 
 def flags2names(flags: int):
-    """Return names of cv2.CALIB_FIX… flags activated
+    """Return names of cv2.CALIB_… flags activated
     based on an int number"""
 
     all_vars = vars(cv2)
     calib_vars = dict(filter(
-        lambda tup: 'CALIB_FIX' in tup[0], all_vars.items()))
+        lambda tup: 'CALIB_' in tup[0], all_vars.items()))
 
     name_actives = map(lambda tup: tup[0], filter(
         lambda tup: flags & tup[1], calib_vars.items()))
