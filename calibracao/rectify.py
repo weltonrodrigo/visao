@@ -164,7 +164,7 @@ R1, R2, P1, P2, Q, validPixROI1, validPixROI2 = cv2.stereoRectify(
     cameraMatrix2=params_R.camera_matrix,
     distCoeffs2=params_R.distortion_coefficients,
     imageSize=(1280, 720),
-    newImageSize=(int(1280*SCALE), int(720*SCALE)),
+    newImageSize=(int(1280 * SCALE), int(720 * SCALE)),
     R=R,
     T=T,
     alpha=1
@@ -183,7 +183,7 @@ def get_map(args):
         distCoeffs=params_L.distortion_coefficients,
         R=rotation,
         newCameraMatrix=matrix,
-        size=(int(1280*SCALE), int(720*SCALE)),
+        size=(int(1280 * SCALE), int(720 * SCALE)),
         m1type=cv2.CV_32FC2
     )
 
@@ -203,7 +203,7 @@ mapx_R, mapy_R = cv2.initUndistortRectifyMap(
     cameraMatrix=params_R.camera_matrix,
     distCoeffs=params_R.distortion_coefficients, R=R2,
     newCameraMatrix=P2,
-    size=(int(1280*SCALE), int(720*SCALE)),
+    size=(int(1280 * SCALE), int(720 * SCALE)),
     m1type=cv2.CV_32FC2
 )
 
@@ -250,6 +250,7 @@ def draw_lines(frame, points):
         cv2.line(frame, (0, y), (5000, y), color)
     return frame
 
+
 def iterate(frame, maps, window):
     for mapx, mapy in itertools.cycle(maps):
         new_frame = cv2.resize(frame.copy(), dsize=None, fx=SCALE, fy=SCALE)
@@ -258,6 +259,7 @@ def iterate(frame, maps, window):
         key = cv2.waitKey(-1)
         if key & 0xFF == ord('q'):
             break
+
 
 RECTIFY = False
 # <editor-fold desc="Display">
@@ -299,6 +301,8 @@ while cap_L.isOpened() and cap_R.isOpened():
 cap_L.release()
 cap_R.release()
 cv2.destroyAllWindows()
+
+
 # </editor-fold>
 
 
