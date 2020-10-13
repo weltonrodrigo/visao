@@ -37,6 +37,30 @@ parser.add_argument(
     "--write-points-to-file",
     metavar="numpy_txt_file"
 )
+parser.add_argument(
+    "--left-source",
+    metavar="file or device",
+    required=True,
+    help='left video source'
+)
+parser.add_argument(
+    "--left-source-calib",
+    metavar="YAML file",
+    required=True,
+    help='left source calibration YAML'
+)
+parser.add_argument(
+    "--right-source",
+    metavar="file or device",
+    required=True,
+    help='right video source'
+)
+parser.add_argument(
+    "--right-source-calib",
+    metavar="YAML file",
+    required=True,
+    help='right source calibration YAML'
+)
 
 args = parser.parse_args()
 # </editor-fold>
@@ -44,8 +68,8 @@ args = parser.parse_args()
 img_points: List[np.ndarray] = []
 
 # Camera2.webm is left, camera1.webm is Right
-sources = ('videos/cam-2-fix.mp4', 'videos/cam-1-fix.mp4')
-param_files = ("calib_files/cam2-fix.yaml", "calib_files/cam1-fix.yaml")
+sources = (args.left_source, args.right_source)
+param_files = (args.left_source_calib, args.right_source_calib)
 
 
 def mark_points(video_filenames, param_filenames):
