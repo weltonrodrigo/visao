@@ -145,7 +145,7 @@ if not res.nodisplay or res.write:
             break
 
         if RECTIFY:
-            frame = cv2.remap(frame, mapx, mapy, cv2.INTER_CUBIC)
+            frame = cv2.remap(frame, mapx, mapy, cv2.INTER_LANCZOS4)
 
         if res.write:
             output_video.write(frame)

@@ -294,7 +294,7 @@ class StateCalibrated(State):
         p = self.context_data['camera_params']
 
         if not self._show_original:
-            frame = cv2.remap(frame, p['mapx'], p['mapy'], cv2.INTER_LINEAR)
+            frame = cv2.remap(frame, p['mapx'], p['mapy'], cv2.INTER_LANCZOS4)
 
             if self._crop:
                 # crop the result
