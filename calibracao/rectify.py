@@ -225,7 +225,7 @@ def draw_lines(frame, points):
 def iterate(frame, maps, window):
     for mapx, mapy in itertools.cycle(maps):
         new_frame = cv2.resize(frame.copy(), dsize=None, fx=SCALE, fy=SCALE)
-        new_frame = cv2.remap(new_frame, mapx, mapy, cv2.INTER_LANCZOS4)
+        new_frame = cv2.remap(new_frame, mapx, mapy, cv2.INTER_CUBIC)
         cv2.imshow(window, new_frame)
         key = cv2.waitKey(-1)
         if key & 0xFF == ord('q'):
@@ -243,15 +243,15 @@ while cap_L.isOpened() and cap_R.isOpened():
         break
 
     if RECTIFY:
-        frame_L = cv2.remap(frame_L, mapx_L, mapy_L, cv2.INTER_LANCZOS4)
-        frame_R = cv2.remap(frame_R, mapx_R, mapy_R, cv2.INTER_LANCZOS4)
+        frame_L = cv2.remap(frame_L, mapx_L, mapy_L, cv2.INTER_CUBIC)
+        frame_R = cv2.remap(frame_R, mapx_R, mapy_R, cv2.INTER_CUBIC)
         # utils.rectangle_from_roi(frame_L, validPixROI1)
         # utils.rectangle_from_roi(frame_R, validPixROI2)
 
     both = cv2.hconcat((frame_L, frame_R))
     both = draw_lines(both, points)
 
-    both = cv2.resize(both, dsize=(1280, 720), interpolation=cv2.INTER_LANCZOS4)
+    both = cv2.resize(both, dsize=(1280, 720), interpolation=cv2.INTER_CUBIC)
     cv2.imshow('both', both)
     key = cv2.waitKey(-1)
 

@@ -89,7 +89,7 @@ class GetPoints():
                 break
 
             if self.rectify:
-                frame = cv2.remap(frame,self.mapx, self.mapy, interpolation=cv2.INTER_LANCZOS4)
+                frame = cv2.remap(frame,self.mapx, self.mapy, interpolation=cv2.INTER_CUBIC)
 
             self.draw_polygon(frame)
             cv2.imshow(self.title, frame)
