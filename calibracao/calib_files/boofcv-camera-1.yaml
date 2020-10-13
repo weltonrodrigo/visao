@@ -1,0 +1,63 @@
+%YAML:1.0
+# image   0 Euclidean ( mean = 4,8e-01 max = 1,1e+00 ) bias ( X = -2,5e-03 Y -4,3e-03 )
+# image   1 Euclidean ( mean = 3,3e-01 max = 8,3e-01 ) bias ( X = -1,6e-04 Y -7,5e-04 )
+# image   2 Euclidean ( mean = 3,9e-01 max = 1,1e+00 ) bias ( X = -2,1e-03 Y -2,0e-03 )
+# image   3 Euclidean ( mean = 6,3e-01 max = 1,6e+00 ) bias ( X =  1,1e-03 Y  2,5e-03 )
+# image   4 Euclidean ( mean = 6,0e-01 max = 1,6e+00 ) bias ( X =  8,4e-04 Y -6,4e-04 )
+# image   5 Euclidean ( mean = 6,7e-01 max = 1,9e+00 ) bias ( X = -5,1e-03 Y -8,1e-03 )
+# image   6 Euclidean ( mean = 6,5e-01 max = 1,7e+00 ) bias ( X =  9,1e-03 Y  6,0e-03 )
+# image   7 Euclidean ( mean = 7,3e-01 max = 2,0e+00 ) bias ( X = -3,2e-03 Y  3,1e-03 )
+# image   8 Euclidean ( mean = 3,8e-01 max = 1,0e+00 ) bias ( X =  2,3e-03 Y  7,6e-03 )
+# image   9 Euclidean ( mean = 6,0e-01 max = 1,4e+00 ) bias ( X = -7,0e-04 Y -4,7e-03 )
+# image  10 Euclidean ( mean = 9,3e-01 max = 2,2e+00 ) bias ( X = -3,6e-03 Y -1,1e-02 )
+# image  11 Euclidean ( mean = 9,3e-01 max = 2,3e+00 ) bias ( X =  6,0e-04 Y  9,1e-03 )
+# image  12 Euclidean ( mean = 6,9e-01 max = 1,4e+00 ) bias ( X =  1,9e-03 Y  5,5e-03 )
+# image  13 Euclidean ( mean = 6,1e-01 max = 1,5e+00 ) bias ( X =  3,2e-03 Y  2,6e-03 )
+# image  14 Euclidean ( mean = 9,3e-01 max = 2,5e+00 ) bias ( X = -3,2e-03 Y  9,3e-03 )
+# image  15 Euclidean ( mean = 9,1e-01 max = 2,5e+00 ) bias ( X =  4,0e-03 Y -6,9e-03 )
+# image  16 Euclidean ( mean = 9,1e-01 max = 2,4e+00 ) bias ( X = -6,8e-03 Y -8,9e-03 )
+# image  17 Euclidean ( mean = 1,3e+00 max = 3,1e+00 ) bias ( X =  2,3e-04 Y  3,5e-03 )
+# image  18 Euclidean ( mean = 1,0e+00 max = 2,7e+00 ) bias ( X =  2,7e-03 Y  1,4e-02 )
+# image  19 Euclidean ( mean = 7,0e-01 max = 2,4e+00 ) bias ( X = -1,2e-03 Y  1,3e-04 )
+# image  20 Euclidean ( mean = 7,0e-01 max = 2,8e+00 ) bias ( X = -2,3e-03 Y -5,0e-04 )
+# image  21 Euclidean ( mean = 7,5e-01 max = 1,5e+00 ) bias ( X =  8,1e-04 Y  1,4e-03 )
+# image  22 Euclidean ( mean = 6,7e-01 max = 1,5e+00 ) bias ( X = -2,0e-03 Y -1,3e-03 )
+# image  23 Euclidean ( mean = 1,8e+00 max = 4,5e+00 ) bias ( X = -1,5e-02 Y  3,1e-03 )
+# image  24 Euclidean ( mean = 1,5e+00 max = 3,8e+00 ) bias ( X =  1,3e-02 Y -1,2e-02 )
+# image  25 Euclidean ( mean = 5,8e-01 max = 1,4e+00 ) bias ( X =  1,2e-03 Y  4,2e-03 )
+# image  26 Euclidean ( mean = 8,3e-01 max = 2,2e+00 ) bias ( X =  3,2e-03 Y -7,8e-03 )
+# image  27 Euclidean ( mean = 1,4e+00 max = 3,6e+00 ) bias ( X =  4,0e-03 Y -1,2e-02 )
+# image  28 Euclidean ( mean = 1,1e+00 max = 2,7e+00 ) bias ( X =  4,4e-03 Y -5,8e-03 )
+# image  29 Euclidean ( mean = 1,3e+00 max = 3,0e+00 ) bias ( X = -5,2e-03 Y  1,1e-02 )
+# image  30 Euclidean ( mean = 1,5e+00 max = 3,6e+00 ) bias ( X =  1,9e-04 Y  3,0e-03 )
+# Average Mean Error = 0.8568633115832311
+# 
+# --- PINHOLE Parameters ---
+# 
+# Time to load image 58 (ms)
+# Time to load image 55 (ms)
+# Shape 1280 720
+# center  626,40  354,50
+# fx = 899.4221629302436
+# fy = 901.3617099722406
+# skew = 0.0
+# radial[0] = 2,09e-01
+# radial[1] = -1,35e+00
+# radial[2] = 2,38e+00
+# radial[3] = -1,05e+00
+# No tangential
+---
+image_width: 1280
+image_height: 720
+camera_matrix: !!opencv-matrix
+   rows: 3
+   cols: 3
+   dt: d
+   data: [ 8.9942216293024364e+02, 0., 6.2639781760621679e+02, 0.,
+       9.0136170997224065e+02, 3.5450462692482733e+02, 0., 0., 1. ]
+distortion_coefficients: !!opencv-matrix
+   rows: 5
+   cols: 1
+   dt: d
+   data: [ 2.0888331092513412e-01, -1.3481723197058919e+00, 0., 0.,
+       2.3825239702041183e+00 ]

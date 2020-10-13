@@ -16,7 +16,7 @@ ffmpeg \
 	-vsync 0 \
 	-pix_fmt yuv420p -crf 1  -preset veryslow \
 	-map '[stereo]' -map '[v]' \
-	-c:v h264_videotoolbox -q:v 1 -b:v 1000k \
+	-c:v h264_videotoolbox -q:v 1 -b:v 10000k \
 	-y concat.mp4\
 	-map '[stereo1]' stereo.wav
 

@@ -1,0 +1,222 @@
+%YAML:1.0
+---
+# With files:
+# /Users/torres/OneDrive/UNB/2020-08 Visão Computacional/Trabalho 1/Calibration2/2020-09-16-104241.jpg
+# /Users/torres/OneDrive/UNB/2020-08 Visão Computacional/Trabalho 1/Calibration2/2020-09-16-104250.jpg
+# /Users/torres/OneDrive/UNB/2020-08 Visão Computacional/Trabalho 1/Calibration2/2020-09-16-104254.jpg
+# /Users/torres/OneDrive/UNB/2020-08 Visão Computacional/Trabalho 1/Calibration2/2020-09-16-104301.jpg
+# /Users/torres/OneDrive/UNB/2020-08 Visão Computacional/Trabalho 1/Calibration2/2020-09-16-104314.jpg
+# /Users/torres/OneDrive/UNB/2020-08 Visão Computacional/Trabalho 1/Calibration2/2020-09-16-104319.jpg
+# /Users/torres/OneDrive/UNB/2020-08 Visão Computacional/Trabalho 1/Calibration2/2020-09-16-104326.jpg
+# /Users/torres/OneDrive/UNB/2020-08 Visão Computacional/Trabalho 1/Calibration2/2020-09-16-104341.jpg
+# /Users/torres/OneDrive/UNB/2020-08 Visão Computacional/Trabalho 1/Calibration2/2020-09-16-104353.jpg
+# /Users/torres/OneDrive/UNB/2020-08 Visão Computacional/Trabalho 1/Calibration2/2020-09-16-104400.jpg
+# /Users/torres/OneDrive/UNB/2020-08 Visão Computacional/Trabalho 1/Calibration2/2020-09-16-104410.jpg
+# /Users/torres/OneDrive/UNB/2020-08 Visão Computacional/Trabalho 1/Calibration2/2020-09-16-104424.jpg
+# /Users/torres/OneDrive/UNB/2020-08 Visão Computacional/Trabalho 1/Calibration2/2020-09-16-104430.jpg
+# /Users/torres/OneDrive/UNB/2020-08 Visão Computacional/Trabalho 1/Calibration2/2020-09-16-104438.jpg
+# /Users/torres/OneDrive/UNB/2020-08 Visão Computacional/Trabalho 1/Calibration2/2020-09-16-104447.jpg
+# Camera: 2
+camera_matrix: !!opencv-matrix
+   rows: 3
+   cols: 3
+   dt: d
+   data: [ 9.5718502728067631e+02, 0., 6.3950000000000000e+02, 0.,
+       9.6589607958972579e+02, 3.5950000000000000e+02, 0., 0., 1. ]
+distortion_coefficients: !!opencv-matrix
+   rows: 1
+   cols: 5
+   dt: d
+   data: [ 9.5883347597942772e-02, -2.4908055432148896e-01, 0., 0., 0. ]
+image_height: 720
+image_width: 1280
+total_error: 3.8839845718182697e-01
+roi: !!opencv-matrix
+   rows: 4
+   cols: 1
+   dt: d
+   data: [ 0., 0., 0., 0. ]
+rvecs:
+   - !!opencv-matrix
+      rows: 3
+      cols: 1
+      dt: d
+      data: [ 3.2130744774723115e-02, 6.1343566961102236e-01,
+          9.5470771106799260e-02 ]
+   - !!opencv-matrix
+      rows: 3
+      cols: 1
+      dt: d
+      data: [ -7.1909174333736718e-03, 1.2334419946447482e-01,
+          6.5821783760993055e-02 ]
+   - !!opencv-matrix
+      rows: 3
+      cols: 1
+      dt: d
+      data: [ 8.5998036150881904e-02, 1.6253313641845404e-03,
+          5.8461998865909817e-02 ]
+   - !!opencv-matrix
+      rows: 3
+      cols: 1
+      dt: d
+      data: [ 9.0136177887621030e-02, -5.1072441027568294e-01,
+          -2.2921170002846519e-02 ]
+   - !!opencv-matrix
+      rows: 3
+      cols: 1
+      dt: d
+      data: [ 8.4080857670949427e-01, 2.2018433203466876e-02,
+          5.7858863941671106e-02 ]
+   - !!opencv-matrix
+      rows: 3
+      cols: 1
+      dt: d
+      data: [ -4.8558357495238924e-01, -8.9503109883538087e-02,
+          1.0923646267079065e-01 ]
+   - !!opencv-matrix
+      rows: 3
+      cols: 1
+      dt: d
+      data: [ 7.3303158305632299e-01, -4.3111789433186015e-01,
+          6.9375531785371716e-02 ]
+   - !!opencv-matrix
+      rows: 3
+      cols: 1
+      dt: d
+      data: [ 6.3472274275451279e-01, 7.8082802845396082e-01,
+          7.1962676909650145e-05 ]
+   - !!opencv-matrix
+      rows: 3
+      cols: 1
+      dt: d
+      data: [ -6.4245495331367719e-01, 4.4321295825277834e-01,
+          3.5497644199702671e-01 ]
+   - !!opencv-matrix
+      rows: 3
+      cols: 1
+      dt: d
+      data: [ -6.7626968753016836e-01, -4.6227606326764026e-01,
+          -1.6805082078835926e-01 ]
+   - !!opencv-matrix
+      rows: 3
+      cols: 1
+      dt: d
+      data: [ 7.3109380814055491e-01, -4.8687191196504193e-01,
+          6.2522165408270047e-02 ]
+   - !!opencv-matrix
+      rows: 3
+      cols: 1
+      dt: d
+      data: [ 1.6702610296715339e-01, 4.4685996902956093e-01,
+          1.9328430846231631e-01 ]
+   - !!opencv-matrix
+      rows: 3
+      cols: 1
+      dt: d
+      data: [ -7.2552908902794933e-01, -8.1086481317163631e-02,
+          8.1515318423282065e-02 ]
+tvecs:
+   - !!opencv-matrix
+      rows: 3
+      cols: 1
+      dt: d
+      data: [ -4.2985017210328413e-01, -3.0845224155815520e+00,
+          1.4977487024781498e+01 ]
+   - !!opencv-matrix
+      rows: 3
+      cols: 1
+      dt: d
+      data: [ -2.4060471379112180e+00, -2.9540711599022411e+00,
+          1.1380902011655463e+01 ]
+   - !!opencv-matrix
+      rows: 3
+      cols: 1
+      dt: d
+      data: [ -5.7117247785381124e+00, -2.5904446035662545e+00,
+          1.0997738414952826e+01 ]
+   - !!opencv-matrix
+      rows: 3
+      cols: 1
+      dt: d
+      data: [ -4.4594831114639444e+00, -2.3713178039188190e+00,
+          9.4226840579353865e+00 ]
+   - !!opencv-matrix
+      rows: 3
+      cols: 1
+      dt: d
+      data: [ -4.0546151906146317e+00, -1.9667202721336452e+00,
+          8.4660675961601068e+00 ]
+   - !!opencv-matrix
+      rows: 3
+      cols: 1
+      dt: d
+      data: [ -3.3070915197159514e+00, -3.0654436048711085e+00,
+          1.0975935442277892e+01 ]
+   - !!opencv-matrix
+      rows: 3
+      cols: 1
+      dt: d
+      data: [ -2.6124766126087824e+00, -1.2552782598882706e+00,
+          6.8608988596360696e+00 ]
+   - !!opencv-matrix
+      rows: 3
+      cols: 1
+      dt: d
+      data: [ -1.9799973916855154e+00, -2.9663915143037247e+00,
+          1.2817762763440841e+01 ]
+   - !!opencv-matrix
+      rows: 3
+      cols: 1
+      dt: d
+      data: [ -5.3031217783636886e-01, -3.6314862120711302e+00,
+          1.5081397647142621e+01 ]
+   - !!opencv-matrix
+      rows: 3
+      cols: 1
+      dt: d
+      data: [ -4.8824695863674492e+00, -2.5730139627004229e+00,
+          1.0740288224941752e+01 ]
+   - !!opencv-matrix
+      rows: 3
+      cols: 1
+      dt: d
+      data: [ -3.3307211113625672e+00, -1.6372194271478515e+00,
+          7.7841303132162416e+00 ]
+   - !!opencv-matrix
+      rows: 3
+      cols: 1
+      dt: d
+      data: [ -7.6454873611046166e+00, -4.0154200458232818e+00,
+          1.3996159307943437e+01 ]
+   - !!opencv-matrix
+      rows: 3
+      cols: 1
+      dt: d
+      data: [ -3.3093524841930497e+00, -2.4749861125334158e+00,
+          1.2106905465951931e+01 ]
+newcameramtx: !!opencv-matrix
+   rows: 0
+   cols: 1
+   dt: d
+   data: []
+mapx: !!opencv-matrix
+   rows: 0
+   cols: 1
+   dt: d
+   data: []
+mapy: !!opencv-matrix
+   rows: 0
+   cols: 1
+   dt: d
+   data: []
+per_view_error: !!opencv-matrix
+   rows: 13
+   cols: 1
+   dt: d
+   data: [ 3.8806304103018779e-01, 2.9404804359306352e-01,
+       4.2743806805042900e-01, 2.7488758596237828e-01,
+       4.7876998070902849e-01, 4.5838977795590130e-01,
+       3.3240032278020720e-01, 2.4001738271771389e-01,
+       1.3229367132090916e-01, 4.5022818331325287e-01,
+       4.9033518112747643e-01, 5.6984333373253149e-01,
+       2.7013475974228890e-01 ]

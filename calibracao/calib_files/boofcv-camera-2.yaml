@@ -1,0 +1,44 @@
+%YAML:1.0
+# image   0 Euclidean ( mean = 6,2e-01 max = 1,7e+00 ) bias ( X = -4,6e-04 Y -4,1e-03 )
+# image   1 Euclidean ( mean = 4,6e-01 max = 1,3e+00 ) bias ( X =  1,2e-03 Y -3,9e-03 )
+# image   2 Euclidean ( mean = 6,7e-01 max = 1,6e+00 ) bias ( X =  3,1e-03 Y -2,3e-03 )
+# image   3 Euclidean ( mean = 6,8e-01 max = 2,3e+00 ) bias ( X = -3,2e-03 Y  8,8e-03 )
+# image   4 Euclidean ( mean = 1,3e+00 max = 3,0e+00 ) bias ( X =  1,5e-02 Y  4,5e-03 )
+# image   5 Euclidean ( mean = 1,0e+00 max = 2,7e+00 ) bias ( X = -1,5e-02 Y  8,4e-03 )
+# image   6 Euclidean ( mean = 1,4e+00 max = 3,1e+00 ) bias ( X =  1,3e-02 Y -1,4e-03 )
+# image   7 Euclidean ( mean = 1,2e+00 max = 2,6e+00 ) bias ( X =  9,2e-03 Y -2,7e-03 )
+# image   8 Euclidean ( mean = 1,2e+00 max = 2,9e+00 ) bias ( X =  1,5e-03 Y -6,9e-03 )
+# image   9 Euclidean ( mean = 1,3e+00 max = 2,8e+00 ) bias ( X = -1,1e-02 Y  5,6e-03 )
+# image  10 Euclidean ( mean = 1,2e+00 max = 2,6e+00 ) bias ( X =  5,2e-03 Y -3,4e-03 )
+# image  11 Euclidean ( mean = 1,0e+00 max = 2,6e+00 ) bias ( X =  2,3e-03 Y  1,6e-03 )
+# image  12 Euclidean ( mean = 1,2e+00 max = 2,7e+00 ) bias ( X =  5,8e-03 Y  6,0e-03 )
+# image  13 Euclidean ( mean = 1,3e+00 max = 3,1e+00 ) bias ( X = -1,8e-02 Y -8,9e-03 )
+# image  14 Euclidean ( mean = 1,4e+00 max = 5,2e+00 ) bias ( X = -8,9e-03 Y -1,4e-03 )
+# Time to load image 25 (ms)
+# Average Mean Error = 1.0669796766008557
+# 
+# --- PINHOLE Parameters ---
+# 
+# Time to load image 24 (ms)
+# Shape 1280 720
+# center  654,27  342,64
+# fx = 952.8371513925605
+# fy = 955.6823036845825
+# skew = 0.0
+# radial[0] = 1,09e-01
+# radial[1] = -2,93e-01
+# No tangential
+---
+image_width: 1280
+image_height: 720
+camera_matrix: !!opencv-matrix
+   rows: 3
+   cols: 3
+   dt: d
+   data: [ 9.5283715139256049e+02, 0., 6.5427186907968496e+02, 0.,
+       9.5568230368458251e+02, 3.4263897131752452e+02, 0., 0., 1. ]
+distortion_coefficients: !!opencv-matrix
+   rows: 5
+   cols: 1
+   dt: d
+   data: [ 1.0860586972336234e-01, -2.9294622257929942e-01, 0., 0., 0. ]
