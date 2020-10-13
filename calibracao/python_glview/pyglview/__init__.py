@@ -1,1 +1,0 @@
-from pyglview.pyglview import *
