@@ -287,8 +287,10 @@ while cap_L.isOpened() and cap_R.isOpened():
             RECTIFY = not RECTIFY  # toggle rectify ON or OFF
         elif key == ord('i'):
             iterate(frame_L, maps, 'left')
-        elif key == ord('.'):
-            cv2.imwrite('frame.png', both)
+        elif key == ord('.'):  # to Save image.
+            cv2.imwrite('images/capturas/frame.png', both)
+            cv2.imwrite('images/capturas/frame-left.png', frame_L)
+            cv2.imwrite('images/capturas/frame-right.png', frame_R)
 
 cap_L.release()
 cap_R.release()
