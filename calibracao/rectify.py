@@ -134,7 +134,11 @@ def solve_for_cam(opoints, ipoints, params: CameraParams) -> Tuple[np.ndarray, n
 
 # Read params and use new camera matrix and no distortion,
 # as source has already been undistorted.
-params_L, params_R = map(CameraParams.read_from_file, param_files)
+try:
+    params_L, params_R = map(CameraParams.read_from_file, param_files)
+except:
+    ll.exception(f'Error reading calib file')
+    exit(1)
 params_L, params_R = map(update_camera_matrix, (params_L, params_R))
 
 rvec_L, tvec_L = solve_for_cam(opoints=obj_points, ipoints=img_points_L, params=params_L)
