@@ -1,6 +1,6 @@
 images/*
 res/*
-**/.DS_Store
+**/**/.DS_Store
 env
 videos/
 *.png
