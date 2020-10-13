@@ -21,6 +21,8 @@ parser.add_argument('--nodisplay', action='store_true',
                     help='do not show videos')
 parser.add_argument('--write', metavar='FILE',
                     help='Write undistorted video to file')
+parser.add_argument('--read-video', metavar='VIDEO',
+                    help='Read input video from VIDEO')
 parser.add_argument('--tangential', action='store_true',
                     help='enable tangential distortion factor')
 parser.add_argument('--radial3', action='store_true',
@@ -130,9 +132,11 @@ ll.debug(f"New camera matrix:\n{newcameramtx}")
 ll.debug(f"ROI: {(roi_x, roi_y, roi_w, roi_h)}" )
 
 
-cap = cv2.VideoCapture(
-    f'/Users/torres/OneDrive/UNB/2020-08 Visão Computacional/'
-    f'Trabalho 1/camera{res.cam}.webm')
+ll.info(f'Reading video from {res.read_video}')
+cap = cv2.VideoCapture(res.read_video)
+if not cap.isOpened():
+    ll.error(f'Could not open source {res.read_video}')
+    exit(1)
 
 if not res.nodisplay:
     WINDOW_TITLE = f"Video cam {res.cam}"
