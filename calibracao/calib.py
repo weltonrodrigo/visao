@@ -93,7 +93,8 @@ def calibrate(alpha, flags, nooutliers=False):
 if res.write:
     output_video = cv2.VideoWriter(
         res.write,
-        cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'), 30, (res.width, res.height)
+        cv2.VideoWriter.fourcc(*'mp4v'),  # codec tag for avc1 vídeo (ffprobe -show_streams reference_video | grep codec_tags
+        10, (res.width, res.height)
     )
 
 if not res.read:
@@ -128,7 +129,11 @@ mapx, mapy = Calibration.get_undistort_maps(params)
 # Convert Region of interest to int for Rectangle.
 roi_x, roi_y, roi_w, roi_h = tuple(map(int, roi))
 
-ll.debug(f"New camera matrix:\n{newcameramtx}")
+matrix_lines = str(newcameramtx).split('\n')
+
+for line in matrix_lines:
+    ll.debug(f"New camera matrix: {line}")
+
 ll.debug(f"ROI: {(roi_x, roi_y, roi_w, roi_h)}" )
 
 
@@ -143,6 +148,9 @@ if not res.nodisplay:
 
     cv2.namedWindow(WINDOW_TITLE)
     cv2.moveWindow(WINDOW_TITLE, x=0, y=0)
+
+if res.write:
+    ll.info(f'Writing video to file {res.write}…')
 
 RECTIFY = True
 if not res.nodisplay or res.write:
@@ -174,6 +182,7 @@ if not res.nodisplay or res.write:
 
 if res.write:
     output_video.release()
+    ll.info(f'Writing video to file {res.write}: DONE')
 
 cap.release()
 cv2.destroyAllWindows()
